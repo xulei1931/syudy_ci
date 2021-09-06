@@ -4,6 +4,7 @@ jobs:
     docker:
     - image: circleci/golang:1.11
     working_directory: /go/src/syudy_ci
+     ADD . /go/src/syudy_ci
     steps:
     - checkout
     - run: echo "checkouut"
@@ -18,5 +19,5 @@ jobs:
             name: build and push Docker images
             shell: /bin/bash
             command: |
-              chmod 777 ./../build.sh
-              ./../build.sh
+              chmod 777 ../build.sh
+              ../build.sh
