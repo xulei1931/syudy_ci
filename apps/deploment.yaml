@@ -1,24 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: cricileCI
+ name: cricle
  labels:
-  name: use
+  name: cricle
 spec:
  replicas: 3
  strategy:
   type: RollingUpdate
  selector:
   matchLabels:
-   name: cricileCI
+   name: cricle
  template:
   metadata:
    labels:
-    name: cricileCI
+    name: cricle
   spec:
-   containers:                    #定义Redis容器，开放6379端口
-    - name: cricileCI
-      image: 1142051133/cricile:0.3.45
+   containers:                  
+    - name: cricle
+      image: 1142051133/cricile:0.3.45s
       ports:
        - containerPort: 9090
-      imagePullPolicy: IfNotPresent
