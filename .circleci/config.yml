@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
     - image: circleci/golang:1.11
-    working_directory: /go/src/github.com/xulei1931/syudy_ci/blob/master
+    working_directory: /go/src/github.com/xulei1931/syudy_ci
     steps:
     - checkout
     - run: echo "checkouut"
