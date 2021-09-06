@@ -3,7 +3,6 @@ jobs:
   build:
     docker:
     - image: circleci/golang:1.11
-      environment: # environment variables for primary container
     working_directory: /go/src/github.com/sydy_ci
     steps:
     - checkout
@@ -14,7 +13,7 @@ jobs:
     - run: echo "A first hello"
 
     - setup_remote_docker:
-        docker_layer_caching: true
+        docker_layer_caching: false
     - run:
             name: build and push Docker images
             shell: /bin/bash
