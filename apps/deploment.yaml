@@ -18,7 +18,7 @@ spec:
   spec:
    containers:                    #定义Redis容器，开放6379端口
     - name: cricileCI
-      image: 1142051133/cricile
+      image: 1142051133/cricile:0.3.45
       ports:
        - containerPort: 9090
       imagePullPolicy: IfNotPresent
