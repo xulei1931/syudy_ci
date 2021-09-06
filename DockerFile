@@ -1,6 +1,6 @@
 FROM golang:latest
-WORKDIR /go/src/syudy_ci
-ADD . /go/src/syudy_ci
+WORKDIR /go/src/github.com/syudy_ci
+ADD . /go/src/github.com/syudy_ci
 RUN go env -w GOPROXY=https://goproxy.cn,direct
 
 ENV GO111MODULE=on
