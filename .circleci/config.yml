@@ -19,5 +19,5 @@ jobs:
             name: build and push Docker images
             shell: /bin/bash
             command: |
-              chmod 777 ../build.sh
-              ../build.sh
+              chmod 777 ./build.sh
+              ./build.sh
