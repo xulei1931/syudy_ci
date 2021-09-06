@@ -13,6 +13,11 @@ jobs:
     
     - run: echo "A first hello"
 
-
-
-
+    - setup_remote_docker:
+        docker_layer_caching: true
+    - run:
+            name: build and push Docker images
+            shell: /bin/bash
+            command: |
+              chmod +x ../build.sh
+              ../build.sh
