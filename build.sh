@@ -8,9 +8,9 @@ STABLE_TAG='0.3'
 DOCKERHUB_USERNAME='1142051133' 
 
 TAG="${STABLE_TAG}.${CIRCLE_BUILD_NUM}"
-ROOT_DIR="$(pwd)"
+#ROOT_DIR="$(pwd)"
 docker login -u $DOCKERHUB_USERNAME  --password-stdin < ./my_password
-echo $ROOT_DIR
+#echo $ROOT_DIR
 
 UNTAGGED_IMAGE=$(echo "${IMAGE_PREFIX}/cricile" | sed -e 's/_/-/g' -e 's/-service//g')
 STABLE_IMAGE="${UNTAGGED_IMAGE}:${STABLE_TAG}"
