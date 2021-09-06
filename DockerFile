@@ -10,3 +10,4 @@ ENV GOPROXY=https://goproxy.cn,direct
 RUN CGO_ENABLED=0 GOOS=linux go build -o main -a -tags netgo -ldflags '-s -w' .
 EXPOSE 9090
 ENTRYPOINT ./main 
+#/go/src/syudy_ci/Dockerfile
