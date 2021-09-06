@@ -4,7 +4,6 @@ jobs:
     docker:
     - image: circleci/golang:1.11
     working_directory: /go/src/syudy_ci
-     ADD . /go/src/syudy_ci
     steps:
     - checkout
     - run: echo "checkouut"
