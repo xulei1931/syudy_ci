@@ -17,6 +17,6 @@ STABLE_IMAGE="${UNTAGGED_IMAGE}:${STABLE_TAG}"
 IMAGE="${UNTAGGED_IMAGE}:${TAG}"
 echo "image: $IMAGE"
 echo "stable image: ${STABLE_IMAGE}"
-docker build  -t docker-whale  -f Dockerfile "$IMAGE" .
+docker build  -t "$IMAGE" .
 docker tag "${IMAGE}" "${STABLE_IMAGE}"
 docker push "${IMAGE}"
