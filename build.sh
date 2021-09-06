@@ -9,7 +9,7 @@ DOCKERHUB_USERNAME='1142051133'
 
 TAG="${STABLE_TAG}.${CIRCLE_BUILD_NUM}"
 ROOT_DIR="$(pwd)"
-
+cd ROOT_DIR
 #docker login -u $DOCKERHUB_USERNAME --password-stdin $DOCKERHUB_PASSWORD
 docker login -u $DOCKERHUB_USERNAME  --password-stdin < ./my_password
 
