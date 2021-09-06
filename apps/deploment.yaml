@@ -18,6 +18,6 @@ spec:
   spec:
    containers:                  
     - name: cricle
-      image: 1142051133/cricile:0.3.45s
+      image: 1142051133/cricile:0.3.45
       ports:
        - containerPort: 9090
